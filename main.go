@@ -3,12 +3,14 @@ package main
 import (
 	"context"
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 
-	"github.com/gorilla/mux"
 	"helper"
 	"models"
+
+	"github.com/gorilla/mux"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
@@ -28,6 +30,7 @@ func main() {
 	r.HandleFunc("/api/books/{id}", deleteBook).Methods("DELETE")
 
 	// set our port address
+	fmt.Println("[*] Web Server Started!")
 	log.Fatal(http.ListenAndServe(":8000", r))
 
 }
