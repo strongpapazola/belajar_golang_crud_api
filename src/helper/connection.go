@@ -16,7 +16,7 @@ import (
 func ConnectDB() *mongo.Collection {
 
 	// Set client options
-	clientOptions := options.Client().ApplyURI("your_cluster_endpoint")
+	clientOptions := options.Client().ApplyURI("mongodb://localhost:27017")
 
 	// Connect to MongoDB
 	client, err := mongo.Connect(context.TODO(), clientOptions)
