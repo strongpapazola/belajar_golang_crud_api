@@ -1,0 +1,2 @@
+{"isbn":"11111","title":"Ayahku Adalah Ibuku","author":{"firstname":"Adi","lastname":"Purwanto"}}
+
